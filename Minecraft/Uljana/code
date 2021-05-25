@@ -1,0 +1,9 @@
+player.onChat("1", function () {
+    for (let index = 0; index < 4; index++) {
+        mobs.spawn(mobs.monster(VEX), pos(989, 54, -299))
+    }
+})
+mobs.teleportToPosition(
+mobs.target(LOCAL_PLAYER),
+world(988, 53, -298)
+)
