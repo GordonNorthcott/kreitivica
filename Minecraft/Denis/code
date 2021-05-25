@@ -1,0 +1,26 @@
+  player.teleport(world(213, 64, -34))
+    agent.teleport(world(219, 68, -29), WEST)
+    agent.turn(LEFT_TURN)
+    agent.turn(LEFT_TURN)
+    agent.movplayer.onChat("тп", function () {
+  e(UP, 1)
+    for (let index = 0; index < 4; index++) {
+        for (let index = 0; index < 4; index++) {
+            for (let index = 0; index < 10; index++) {
+                agent.place(DOWN)
+                agent.move(FORWARD, 1)
+            }
+            agent.turn(LEFT_TURN)
+        }
+        agent.move(UP, 1)
+    }
+    for (let index = 0; index < 10; index++) {
+        mobs.spawn(mobs.monster(ZOMBIE), world(213, 67, -34))
+    }
+    gameplay.timeSet(gameplay.time(NIGHT))
+    gameplay.setDifficulty(NORMAL)
+    gameplay.setGameMode(
+    SURVIVAL,
+    mobs.target(LOCAL_PLAYER)
+    )
+})
