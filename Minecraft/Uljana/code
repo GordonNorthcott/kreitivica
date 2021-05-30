@@ -1,9 +1,21 @@
 player.onChat("1", function () {
-    for (let index = 0; index < 4; index++) {
-        mobs.spawn(mobs.monster(VEX), pos(989, 54, -299))
-    }
+    blocks.fill(
+    AIR,
+    pos(1087, 59, -365),
+    pos(1091, 63, -360),
+    FillOperation.Destroy
+    )
 })
-mobs.teleportToPosition(
+player.onTravelled(WALK, function () {
+    blocks.place(ORANGE_WOOL, pos(0, -1, 0))
+})
+mobs.give(
 mobs.target(LOCAL_PLAYER),
-world(988, 53, -298)
+BOW,
+1
+)
+mobs.give(
+mobs.target(LOCAL_PLAYER),
+ARROW,
+1
 )
