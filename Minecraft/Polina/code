@@ -39,10 +39,7 @@ mobs.onMobKilled(CHICKEN, function () {
 let chicken = 0
 let rabbit = 0
 let cat = 0
-gameplay.setGameMode(
-SURVIVAL,
-mobs.target(LOCAL_PLAYER)
-)
+gameplay.timeSet(gameplay.time(DAY))
 mobs.teleportToPosition(
 mobs.target(LOCAL_PLAYER),
 world(3840, 69, 1505)
